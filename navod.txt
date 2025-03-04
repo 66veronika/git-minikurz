@@ -1,0 +1,67 @@
+git je verzovací systém
+
+-uchovává historii projektu
+commit
+historie- repozitář (složka  .git = repository)
+
+-větvení (lze upravovat více "větví/branches" najednou)
+pokud feature branch je hotová a chceme ji přidat do projektu -> git merge (vložíme ji do main branch)
+conflict - pokud se upravoval stejný soubor v dvou rúzných větví ->musí se upravit soubor do jednoho, změny jednho souboru se aplikuje do druhého
+
+-uploadování (na společné úložiště - nejčastěji se používá github)
+uploadujou se aktuální soubory + historie změn - jde vidět na githubu
+
+github- online úložiště pro vaši historii souboru
+- ostatní programatoři si mohou vaši historii stáhnout a začít pracovat na stejném projektu
+- projekt můžete na githubu vytvořit veřejný nebo privátní
+
+1.instalace gitu (source control) (get git) - git-scm.com
+//stahneme si instalaci: https://git-scm.com/downloads
+volby v instalaci: 
+    1. výchozí editor ->ZVOLIT Visual Editor Code (místo VIM)
+    2. jak pojmenovat hlavní větev? místo Master - volba main
+    3. další stránka (recommended - asi prostřední)
+    4. zbytek instalace nechat stejný a proklikat se nkonec
+
+GIT stejně jako Composer nemá grafické rozhraní (nemá tlačítka a ovládací prvky) - všechno se musí dělat pomocí příkazů
+- je možné si do visualu stáhnout grafické rozhraní
+-nějaké základní ovládací prvky už visual má
+- otevřeme záložku source control (Ctr+Shift+G)
+-pokud vidíme 2 tlačítka (initialize repository a publish to github), tak to znamená že VSC rozpoznalo, že máme nainstalovaný git
+
+pokud klikneme na tlačítko init repo, tak se vytcoří repozitář na kořenové složce ( v našem případě programator-unor)
+pokud chceme vytvořit historii v nějaké konkrétní složce, tak je lepší použít terminálový příkazů
+
+otevereme si terminal na složce "git.minikurz"
+# git init
+
+(git init vytvoří do složky projektu neviditelnou složku. Tato neviditelná složka se jmenuje .git. Abychom tuto složku mohly vidět tak je potřeba zapnout v průzkumníku volbu zobrazit skryté soubory - v htdocs - git.minikurz (zobrazit -> zobrazit -> show hidden items))
+(můžeme smazat neviditelnou složku git v htdocs)
+
+slozka .git v sobě obsahuje celou historii projektu, dokud máte složku .git, tak je uplne jedno, jaké soubory smažete - vždy se to dá zpětně obnovit
+
+git začne sledovat vaše změny
+! u souboru se pak mohou objevit nějaká písmenka
+U - untracked, soubor je nový a ještě neexistuje v historii
+A - added, soubor je nový a chystá se na první zápis do historie
+M - modified, soubor už v historii existuje, někdo soubor poeditoval od poslední historie
+D - deleted, soubor v historii existuje, ale někdo ho označil za smazaný
+
+navíc se v levém panelu v záložce source control objevilo číslo, které říká kolik souborů bylo změněno
+
+musíme si zýchytné body historie vytvářet sami
+říká se tomu commity/snapshoty/checkpointy
+
+Vytvoření commitu
+vašemu projektu se v gitu říká workspace
+
+mezi workspace a repository (historie) je stage (dáme tam předměty předtím než je dáme do historie)
+
+musíte relevantní soubory z workplace označit do staging area
+staging area je prostor pro soubory, které se chystáte zapsat do repozitáře
+chceme aby byly seskupeny soubory,k teré mají spolu něco společného
+díky staging area si můžeme všechnu práci, co jsme udělali rozdělit do menších commitů
+
+commit můžeme udělat pomocí grafckého rozhraní nebo zase pomocí příkazu
+A) pomocí grafického rozhraní
+    
