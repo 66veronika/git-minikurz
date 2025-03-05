@@ -79,6 +79,13 @@ tip:vždy začněte větou "Co tento commit udělá, když ho někdo adoptuje?" 
 např: přidá kontaktní formulář, odebere zastaralou listu, opravi chybu rezervace
 
 
+//B) commitovani pomici prikazu
+//otevrem terminal ve slozce projektu
+//zjistit jake soubory se zmenily
+// # git status
+přesun souborud o stagovaci faze
+// # git add nazev-souboru
+( gid add ./  - uloží všechny soubory v aktuální složce - nemusíme přidávat soubory po jednom)
 
 
 
