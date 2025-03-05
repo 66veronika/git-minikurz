@@ -1,0 +1,8 @@
+hesla.txt
+vendor/
+obrazky/profilovky/tony.jpg
+public.log
+admin.log
+testing.log
+= pro šechny logy ->  *.log
+*.log 
