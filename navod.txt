@@ -22,6 +22,9 @@ volby v instalaci:
     2. jak pojmenovat hlavní větev? místo Master - volba main
     3. další stránka (recommended - asi prostřední)
     4. zbytek instalace nechat stejný a proklikat se nkonec
+    5. az se vas to zepta zda chcete pouzit credential manager, tak vyberte volbu None, pokud pocitac bude pouzivat vice lidi
+       pokud budeme používat sami (náš soukromý počítač) tak můžeme nechat "ano" 
+    
 
 GIT stejně jako Composer nemá grafické rozhraní (nemá tlačítka a ovládací prvky) - všechno se musí dělat pomocí příkazů
 - je možné si do visualu stáhnout grafické rozhraní
@@ -137,6 +140,23 @@ alternativne  můžeme použít jiné služby např GitLab nebo BitBucket
 
 
 
+BRANCHES 
+- v práci nebudeme provádět změny na hlavní větvi main
+- vše co budeme programovat bude mít svojí vlastní větev
+název větve se bude vždy řídit pravidly firmy
+název větve nesmí obsahovat mezery, můžeme použít - nebo /
+může mít určitý tvar, může vypadat třeba takto:
+
+(typ/cisloTiketu-jmeno-cilVetve)
+feature/5146-tony-rezervace
+
+feature - nová věc, co program ještě nemá
+hotfix - dočasné řešení problému
+bugfix - trvalé řešení problému
+refactor - prepsani funkčního kodu do lepší formy
+wip - rozdělaná/nedokončená práce (work in progress)
+
+ve firme budete ukoly dostavat ve forme tiketu, kazdy tiket ma nejake identifikacni cislo
 
 
 
@@ -147,8 +167,3 @@ alternativne  můžeme použít jiné služby např GitLab nebo BitBucket
 
 
 
-
-větve názvy
-bugfix, hotfix, feature, wip (work in progress)
-
-.
