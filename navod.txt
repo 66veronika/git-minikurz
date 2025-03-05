@@ -62,6 +62,32 @@ staging area je prostor pro soubory, které se chystáte zapsat do repozitáře
 chceme aby byly seskupeny soubory,k teré mají spolu něco společného
 díky staging area si můžeme všechnu práci, co jsme udělali rozdělit do menších commitů
 
+před commitem je potřeba definovat identifikační údaje autora - jinak to vyhodí chybu ->musíme pustit 2 příkazy
+    1.) # git config --global user.name "Student" 
+    2.) # git config --global user.email "student@student.cz"
+    tyto 2 příkazy musíme spustit v terminálu
+
 commit můžeme udělat pomocí grafckého rozhraní nebo zase pomocí příkazu
 A) pomocí grafického rozhraní
-    
+   -každý soubor u sebe bude mít nějaké písmenko,které říká v jakém stavu soubor je
+   -klikneme na +  ->soubor je ve "stage area"
+   -musíme přidat komentář (popis změny, co soubory dělají) - do kolonky nahoře
+   -klikneme na commit (vidíme M)
+
+vždycky pojmenovat commit, tak aby abylo jasné, co commit vykoná
+tip:vždy začněte větou "Co tento commit udělá, když ho někdo adoptuje?" odpoved - použijte jako commit komentář
+např: přidá kontaktní formulář, odebere zastaralou listu, opravi chybu rezervace
+
+
+
+
+
+
+
+
+
+
+
+
+větve názvy
+bugfix, hotfix, feature, wip (work in progress)
