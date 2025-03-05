@@ -158,8 +158,32 @@ wip - rozdělaná/nedokončená práce (work in progress)
 
 ve firme budete ukoly dostavat ve forme tiketu, kazdy tiket ma nejake identifikacni cislo
 
+nová BRANCH
+a) vytvoření nové branche pomocí grafických prvků
+    klikneme na tri tečky (...) vedle SOURCE CONTROL a vybereme branch>create branch
+    VSC se nás zepta na jméno branche
+    nyní je náš editor nastavený na nové branchy, všechno co od teď upravíme nebo přidáme a smažeme, tak se bude týkat pouze té nové branche. Main větev zustane nedotčená
+    Po commitnutí a pushnuti do GitHubu vytvoříte PR (pull request), kde napíšete šefovi, aby vám branch zkontroloval a shcvalil
+    mezitím můžeme vytvvořit dalíš branch a pracovat na jiném úkolu
 
+b) nová branch pomocí příkazu
+# git branch feature/712-student-menu
 
+branch můžeme smazat tímto příkazem:
+# git branch -d feature/712-student-menu
+
+POHYB V BRANCICH
+tento příkaz zjistí v jaké branchi zrovna jste: 
+    # git status
+pomocí příkazu checkout můžete změnit aktivní branch
+chceme se vrátit na branch main:
+    # git checkout main
+
+výpis seznamu všech branchí:
+# git branch
+
+chceme se presunout do branche "feature/712-tony-menu"
+# git checkout feature/712-tony-menu
 
 
 
