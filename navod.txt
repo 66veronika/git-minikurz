@@ -150,3 +150,5 @@ alternativne  můžeme použít jiné služby např GitLab nebo BitBucket
 
 větve názvy
 bugfix, hotfix, feature, wip (work in progress)
+
+.
