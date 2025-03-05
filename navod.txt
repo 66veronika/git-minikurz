@@ -85,7 +85,59 @@ např: přidá kontaktní formulář, odebere zastaralou listu, opravi chybu rez
 // # git status
 přesun souborud o stagovaci faze
 // # git add nazev-souboru
-( gid add ./  - uloží všechny soubory v aktuální složce - nemusíme přidávat soubory po jednom)
+(# gid add ./  - uloží všechny soubory v aktuální složce - nemusíme přidávat soubory po jednom - nebo # git add .)
+
+tento příkaz provede commit souboru, co jsou ve stage fazi
+# get commit -m "komentar commitu"
+
+pokud se chcete podivat na seznam všech commitů, tak spustit tento příkaz ->
+# git log
+
+PRIVATE
+občas máte v pracovní složce projektu soubory, které jsou citlivé a neměly by se nikdy dostat ven 
+nebo to mohou byt knihovny (např složka vendor)
+tyto soubory můžeme uvést do .gitignore, aby je git vubec nevidel a nesledoval, tyto soubory se pak nikdy do commitu nedostanou
+
+
+obcas mate v pracovni slozce projektu soubory, ktere jsou citlive a nemely by se nikdy dostat ven
+- nebo to mohou byt knihovny
+- tyto sobory muzeme uvest do .gitignore, aby je git vubec nevidel a sledoval, tato soubory se pak nikdyo do commitu nedostanou
+- abychom pri commitovani nemuseli furt manualne citlive soubory odebirat, tak je muzeme uvest do souboru -> .gitignore
+- kazdy soubor/slozka uvedeny v .gitignore ma svuj vlastni radek
+- slozky vzdy budou koncit /gitignore
+
+pokud chceme zaignorovat 
+    public.log
+    admin.log
+    testing.log
+= pro šechny logy ->  *.log
+*.log (zaignorují se všechny soubory s koncovkou .log)
+* znamená libovolný string
+
+
+pokud pracujeme sami, tak stačí místí historie pouze u sebe na lokalu - local repo
+pokuda ale chcete pracovat v tymu, tka je potreba localni repo nakopirovat do remote repo (rika se tomu origin)
+ostatni spolupracovnici budou vzdy synchronizovat sve localni repo s originem
+pokud projekt u sebe jeste spolupracovnik nema, tak musi provest clonovani (nakopirovani celeho repo z remotu do zarizeni a vytvorit se local repo)
+potom, co váš spolupracovník dokončí své úkoly, tak může do remote repo "pushnout" zmeny
+pokud nedojde ke klonflitu, tak github zmeny prijme a zaintegruje
+pokud ostatni spolupraocvnici chteji mit aktualni verzi tak musi udelat "pull"
+pri pushovani muze nastat konflikt (2 lidi se snazi pushnout zmeny ve stejnem souboru a github neví, kterého upřednostnit nebo jak tyto dva kody spojit)
+
+pokud nemáte práva pushovat do hlavní větve programu (např u juniorů) tak muíste vytvořit pull request (PR)
+PR se používá k tomu, aby váš senior vaši práci zkontroloval
+-> pokud je vše v pořádku, tak váš senior kod přijme a github ho zaintegruje do hlavni vetve
+
+upload "local repo" na github = push
+stahnuti "remote repo/origin" z github k sobe = clone
+pokud nastal conflict - musime si stahnout zmeny = pull, upravime a pak muzeme zase "push"
+
+ucet na github.com
+alternativne  můžeme použít jiné služby např GitLab nebo BitBucket
+
+
+
+
 
 
 
